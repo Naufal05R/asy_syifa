@@ -5,7 +5,7 @@ import { supports } from '@/constants';
 
 export default function Home() {
   return (
-    <div className='relative flex flex-col text-center'>
+    <div className='relative flex flex-col w-full text-center'>
       <Hero />
 
       <section
@@ -14,7 +14,7 @@ export default function Home() {
         <Stats />
       </section>
 
-      <section className='mb-12 mt-12'>
+      <section className={`${styles.paddingY} my-12`}>
         <h2 className='mb-16 text-xl font-bold sm:text-2xl lg:text-4xl'>
           Apa yang menarik?{' '}
           <span className='font-normal lg:text-2xl'>
@@ -22,7 +22,7 @@ export default function Home() {
           </span>
         </h2>
 
-        <article className={`-m-1 flex flex-wrap md:-m-2 ${styles.paddingX}`}>
+        <article className={`flex flex-wrap ${styles.paddingX}`}>
           <Figure index={0} />
           <Figure index={1} />
         </article>
@@ -34,13 +34,13 @@ export default function Home() {
         </h2>
 
         <div className='mx-auto w-fit select-none rounded-xl bg-black p-4 neon-gray lg:px-6'>
-          <h3 className='w-fit text-lg font-bold text-white sm:text-xl lg:text-2xl'>
+          <h3 className='w-fit text-lg font-bold text-white whitespace-nowrap sm:text-xl lg:text-2xl'>
             Penunjang kami
           </h3>
         </div>
 
         <div className='w-full py-24'>
-          <article className={`-m-4 flex flex-wrap ${styles.paddingX}`}>
+          <article className={`flex flex-wrap ${styles.paddingX}`}>
             {supports.map((item, index) => (
               <Card
                 key={index}

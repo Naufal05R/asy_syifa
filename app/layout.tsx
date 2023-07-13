@@ -9,8 +9,24 @@ import { styles } from './styles';
 const general = localFont({
   src: [
     {
+      path: '../public/fonts/OTF/GeneralSans-Extralight.otf',
+      weight: '200',
+    },
+    {
+      path: '../public/fonts/OTF/GeneralSans-Light.otf',
+      weight: '300',
+    },
+    {
       path: '../public/fonts/OTF/GeneralSans-Regular.otf',
       weight: '400',
+    },
+    {
+      path: '../public/fonts/OTF/GeneralSans-Medium.otf',
+      weight: '500',
+    },
+    {
+      path: '../public/fonts/OTF/GeneralSans-Semibold.otf',
+      weight: '600',
     },
     {
       path: '../public/fonts/OTF/GeneralSans-Bold.otf',
@@ -58,11 +74,11 @@ export default function RootLayout({
           sizes='any'
         />
       </head>
-      <body className={`relative bg-white text-black`}>
+      <body className={`bg-white text-black`}>
         <header className='fixed z-20 top-0 w-full'>
           <Navbar className={`${styles.padding}`} />
         </header>
-        <main className='min-h-screen'>{children}</main>
+        <main className='min-h-screen relative'>{children}</main>
         <Footer />
       </body>
     </html>

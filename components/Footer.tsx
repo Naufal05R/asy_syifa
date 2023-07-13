@@ -10,7 +10,7 @@ const FooterCategoryLink = ({ index }: ItemProps) => (
       href='/'
       className='inline-flex w-full py-1 text-neutral-600 transition duration-300 hover:text-neutral-950 hover:underline'
     >
-      Link Item {index}
+      Link Test {index}
     </Link>
   </li>
 );

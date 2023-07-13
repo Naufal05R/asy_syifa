@@ -15,7 +15,7 @@ const StatItem = ({ item }: ItemProps) => {
 
 const Stats = () => {
   return (
-    <article className='flex flex-col md:flex-row items-center justify-center gap-16'>
+    <article className='flex flex-col w-full md:flex-row items-center justify-center gap-16'>
       {stats.map((item, index) => (
         <StatItem
           key={index}
